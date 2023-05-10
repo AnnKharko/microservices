@@ -14,6 +14,10 @@
     "@lib/providers/(.*)": "<rootDir>/../libs/providers/src/$1",
     "@lib/providers": "<rootDir>/../libs/providers/src",
     "@lib/entities/(.*)": "<rootDir>/../libs/entities/src/$1",
-    "@lib/entities": "<rootDir>/../libs/entities/src"
+    "@lib/entities": "<rootDir>/../libs/entities/src",
+    "@lib/post/(.*)": "<rootDir>/../libs/post/src/$1",
+    "@lib/post": "<rootDir>/../libs/post/src",
+    "@lib/errors/(.*)": "<rootDir>/../libs/errors/src/$1",
+    "@lib/errors": "<rootDir>/../libs/errors/src"
   }
 }
