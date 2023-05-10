@@ -2,7 +2,7 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import { config } from 'dotenv';
 import { join } from 'path';
 import { ConfigService } from '@nestjs/config';
-import { Post } from './../../../entities/src/post.entity';
+import { PostEntity } from './../../../entities/src/post.entity';
 
 config({ path: join(process.cwd(), '.env') });
 const configService = new ConfigService();
@@ -24,7 +24,7 @@ const options = (): DataSourceOptions => {
     name: configService.get('POSTGRES_DB'),
     logging: !configService.get<boolean>('IS_PROD'),
     synchronize: false,
-    entities: [Post],
+    entities: [PostEntity],
     migrations: [
       join(
         process.cwd(),
