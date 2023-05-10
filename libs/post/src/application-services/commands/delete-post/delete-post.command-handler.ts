@@ -9,7 +9,6 @@ export class DeletePostCommandHandler
   implements ICommandHandler<DeletePostCommand, boolean>
 {
   private readonly logger = new Logger(DeletePostCommandHandler.name);
-
   constructor(private readonly postRepository: PostRepository) {}
 
   async execute({ id }: DeletePostCommand): Promise<boolean> {
